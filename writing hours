@@ -1,0 +1,27 @@
+def calculate_daily_hours(phases):
+    total_hours = sum(phases.values())
+    days_in_year = 365
+    daily_hours = total_hours / days_in_year
+    return daily_hours
+
+def main():
+    # Define the phases and estimated hours for each phase
+    phases = {
+        'Writing': 600,          # Estimated hours for writing the book
+        'Editing': 100,          # Estimated hours for editing the book
+        'Proofreading': 50,      # Estimated hours for proofreading
+        'Cover Design': 30,      # Estimated hours for designing the cover
+        'Formatting': 40,        # Estimated hours for formatting the book
+        'Marketing': 80,         # Estimated hours for marketing the book
+        'Publishing': 20,        # Estimated hours for publishing the book
+        'Sales Preparation': 30  # Estimated hours for preparing for sales
+    }
+
+    # Calculate the daily hours needed
+    daily_hours = calculate_daily_hours(phases)
+
+    # Display the result
+    print(f"To complete the book creation process within one year, you need to spend approximately {daily_hours:.2f} hours per day.")
+
+if __name__ == "__main__":
+    main()
